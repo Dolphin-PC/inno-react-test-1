@@ -13,7 +13,8 @@ function App() {
     { id: 3, text: "자바스크립트를 배워봅시다." },
   ]);
 
-  const handleAddTodo = () => {
+  const handleAddTodo = (e) => {
+    e.preventDefault();
     if (input === "") return;
 
     const newTodo = {
@@ -27,10 +28,10 @@ function App() {
 
   return (
     <>
-      <div>
+      <form onSubmit={handleAddTodo}>
         <input value={input} onChange={(e) => setInput(e.target.value)} />
-        <button onClick={handleAddTodo}>추가하기</button>
-      </div>
+        <button>추가하기</button>
+      </form>
       <h1>Todo List</h1>
       <ul className="todo-card-container">
         {todos.map((todo) => (
