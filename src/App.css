@@ -1,0 +1,26 @@
+#root {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.todo-card {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgb(56, 232, 56);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
